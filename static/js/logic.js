@@ -1,19 +1,19 @@
 console.log("working");
 
-const apiKey = process.env.REACT_APP_API_KEY
+const API_KEY = process.env.REACT_APP_API_KEY
 
 // Creating the tile layer that will be the background of the map.
 let streets = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/outdoors-v11/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
-    accessToken: REACT_APP_API_KEY
+    accessToken: API_KEY
 });
 
 // Creating the satellite view tile layer that will be an option for the map.
 let nightNavigation = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/navigation-night-v1/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
-    accessToken: REACT_APP_API_KEY
+    accessToken: API_KEY
 });
 
 // Creating a base layer that holds both maps.
